@@ -1,0 +1,92 @@
+/* The button*/
+.button {
+	display: inline-block;
+	border-radius: 4px;
+	background: linear-gradient(
+		56deg,
+		rgba(255,63,58,1) 0%,
+		rgba(247,94,5,1) 50%,
+		rgba(254,255,0,1) 65%,
+		rgba(255,63,58,1) 100%);
+	background-size: 300%;
+	background-position: left;
+	border: 1px solid #FF3F3A;
+	font-weight: 700;
+	line-height: 1.25;
+	letter-spacing: 0.5px;
+	color: #fff;
+	padding: 15px 40px;
+	transition: all 0.5s ease 0s;
+}
+.button:hover {
+	background-position: right;
+}
+/* Button with a border */
+.button--border {
+	background: linear-gradient(56deg,
+	rgba(255,63,58,1) 0%,
+	rgba(254,255,0,1) 35%,
+	rgba(247,94,5,0) 50%,
+	rgba(255,63,58,0) 100%);
+	background-size: 300%;
+	background-position: right;
+	border: 1px solid #FF3F3A;
+	color:#FF3F3A;
+	padding: 15px 40px;
+	transition: all 0.5s ease 0s;
+}
+.button--border:hover {
+	color: #fff;
+	background-color: #FF3F3A;
+	background-position: left;
+}
+.header__logo {
+	position: relative;
+	display: inline-block;
+}
+.header__logo:after {
+	content: "<";
+	color: #FF3F3A;
+	font-size: 30px;
+	font-weight: 900;
+	position: absolute;
+	right: -7px;
+	bottom: -2px;
+	opacity: 0;
+	visibility: hidden;
+}
+.header__logo:hover::after {
+	animation: logo-after 0.5s;
+}
+@keyframes logo-after {
+	0% {opacity: 0;
+		visibility: hidden;}
+	50% {opacity: 0.5;
+		visibility: visible;}
+	100% {opacity: 0;
+		visibility: hidden;
+	transform: scale(2) translate(5px, -1px);}
+}
+.header__logo::before {
+	content: ">";
+	color: #FF3F3A;
+	font-size: 30px;
+	font-weight: 900;
+	position: absolute;
+	right: 14px;
+	bottom: -2px;
+	opacity: 0;
+	visibility: hidden;
+}
+.header__logo:hover::before {
+	animation: logo-before 0.5s;
+}
+@keyframes logo-before {
+	0% {opacity: 0;
+		visibility: hidden;}
+	50% {opacity: 0.5;
+		visibility: visible;}
+	100% {opacity: 0;
+		visibility: hidden;
+	transform: scale(2) translate(-5px, -1px);}
+}
