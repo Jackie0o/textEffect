@@ -1,1 +1,1 @@
-(https://jackie0o.github.io/textEffect/)
+https://jackie0o.github.io/textEffect/
